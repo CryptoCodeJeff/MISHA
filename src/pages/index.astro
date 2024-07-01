@@ -1,0 +1,94 @@
+---
+import CA from '@/components/CA.svelte'
+import Logo from '@/components/Logo.svelte'
+import Svg from '@/components/essentials/Svg.svelte'
+import Layout from '@/layouts/Layout.astro'
+---
+
+<style lang="scss">
+  @import 'src/sass/mixins.scss';
+
+  .socials {
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: fit-content;
+    top: 20px;
+    left: 0;
+    right: 0;
+    padding: 15px 50px;
+    border-radius: 50px;
+    gap: 20px;
+
+    :global(svg) {
+      margin-top: 7px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .hero {
+    height: 100dvh;
+
+    h1 {
+      font-family: 'SF Pale Bottom Shaded', sans-serif;
+      font-size: 80px;
+      text-align: center;
+      padding: 50px 0;
+
+      @include notDesktop {
+        font-size: 40px;
+      }
+    }
+
+    h3 {
+      font-family: 'SF Pale Bottom Shaded', sans-serif;
+      font-size: 80px;
+      padding: 50px 0;
+      text-align: center;
+
+      @include notDesktop {
+        font-size: 40px;
+      }
+    }
+  }
+</style>
+
+<Layout title="$LELO on Solana">
+  <div class="socials" reveal>
+    <a href="https://t.me/FeedEveryBonk" target="_blank">
+      <Svg name="telegram" />
+    </a>
+    <a href="https://pump.fun/2ePDJUwAb7SeuFovCikS9LFS9CX9tj5WMtrpANeYpump" target="_blank">
+      <Svg name="pump" />
+    </a>
+    <a href="https://x.com/FeedEveryBonk" target="_blank">
+      <Svg name="twitter" />
+    </a>
+    <a href="" target="_blank">
+      <Svg name="dexscreener" />
+    </a>
+  </div>
+
+  <div class="hero g-wrapper">
+    <h1 reveal="0.6">Feed every bonk degen until we win</h1>
+
+    <Logo client:load />
+
+    <h3 reveal="1.2">BUY $LELO</h3>
+
+    <CA client:visible />
+  </div>
+</Layout>
+
+<script>
+  import { animReveal } from '@/utils/reveal'
+
+  window.onload = () => {
+    setTimeout(() => {
+      animReveal()
+    }, 200)
+  }
+</script>
