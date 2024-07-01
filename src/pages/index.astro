@@ -1,87 +1,172 @@
 ---
-import CA from '@/components/CA.svelte'
-import Logo from '@/components/Logo.svelte'
-import Svg from '@/components/essentials/Svg.svelte'
-import Layout from '@/layouts/Layout.astro'
+import Footer from '@/components/Footer.svelte'
+import MiniGame from '@/components/MiniGame.svelte'
+
+const title = 'MISHA'
+const description = 'Miau'
 ---
 
 <style lang="scss">
+  @import 'src/sass/global.scss';
   @import 'src/sass/mixins.scss';
 
-  .socials {
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: fit-content;
-    top: 20px;
-    left: 0;
-    right: 0;
-    padding: 15px 50px;
-    border-radius: 50px;
-    gap: 20px;
-
-    :global(svg) {
-      margin-top: 7px;
-      width: 50px;
-      height: 50px;
-    }
+  * {
+    font-family: 'Indie Flower';
   }
 
   .hero {
-    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    min-height: 100dvh;
 
-    h1 {
-      font-family: 'SF Pale Bottom Shaded', sans-serif;
-      font-size: 80px;
-      text-align: center;
-      padding: 50px 0;
-
-      @include notDesktop {
-        font-size: 40px;
-      }
+    .celo {
+      width: 100%;
+      max-width: 500px;
     }
 
-    h3 {
-      font-family: 'SF Pale Bottom Shaded', sans-serif;
-      font-size: 80px;
+    @include notDesktop {
+      flex-direction: column;
+    }
+
+    .left {
+      .dollars {
+        position: absolute;
+        top: -10px;
+        left: -80px;
+
+        @include notDesktop {
+          top: 0px;
+          left: -20px;
+        }
+      }
+      h1 {
+        position: relative;
+        font-size: 170px;
+        margin: 0;
+
+        @include notDesktop {
+          padding: 50px 0;
+          font-size: 100px;
+          text-align: center;
+        }
+      }
+      h2 {
+        font-size: 70px;
+        margin: 0;
+
+        @include notDesktop {
+          text-align: center;
+          font-size: 50px;
+        }
+      }
+    }
+  }
+
+  .text-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('/assets/pattern.jpg');
+
+    .bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(255, 255, 255, 0.95);
+
+      box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .text {
       padding: 50px 0;
-      text-align: center;
+
+      p {
+        font-size: 35px;
+        padding: 20px 0;
+        text-align: center;
+        text-wrap: pretty;
+
+        @include notDesktop {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  .game-text {
+    height: 100dvh;
+    h3 {
+      font-size: 45px;
+      padding: 10px 0;
 
       @include notDesktop {
-        font-size: 40px;
+        font-size: 30px;
       }
     }
   }
 </style>
 
-<Layout title="$LELO on Solana">
-  <div class="socials" reveal>
-    <a href="https://t.me/FeedEveryBonk" target="_blank">
-      <Svg name="telegram" />
-    </a>
-    <a href="https://pump.fun/2ePDJUwAb7SeuFovCikS9LFS9CX9tj5WMtrpANeYpump" target="_blank">
-      <Svg name="pump" />
-    </a>
-    <a href="https://x.com/FeedEveryBonk" target="_blank">
-      <Svg name="twitter" />
-    </a>
-    <a href="" target="_blank">
-      <Svg name="dexscreener" />
-    </a>
-  </div>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="view-transition" content="same-origin" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/jpg" href="/assets/logo.jpg" />
+    <meta name="generator" content={Astro.generator} />
 
-  <div class="hero g-wrapper">
-    <h1 reveal="0.6">Feed every bonk degen until we win</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet" />
 
-    <Logo client:load />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="g-wrapper">
+      <div class="hero">
+        <div class="left">
+          <h1>
+            <img class="dollars" src="/assets/dolaritos.png" alt="" />
 
-    <h3 reveal="1.2">BUY $LELO</h3>
+            MISHA
+          </h1>
+          <h2 reveal>Cuteness is trending</h2>
+        </div>
 
-    <CA client:visible />
-  </div>
-</Layout>
+        <img class="celo" src="/assets/celo.png" alt="" />
+      </div>
+    </div>
+
+    <div class="text-wrapper">
+      <div class="bg"></div>
+      <div class="text g-wrapper">
+        <p reveal>Imagine opening your wallet and seeing $MISHA right at the top,<br /> with beautiful green numbers.</p>
+
+        <p reveal="0.6">It’s not just about making money; it’s about finding joy in the process.</p>
+
+        <p reveal="0.9"><b>THE TRUE EXSITENCE OF MEME COINS</b></p>
+        <br /><br />
+        <p reveal="1.1">Join our cozy community and be part of great conversations happening right now on our Telegram.</p>
+      </div>
+    </div>
+
+    <div reveal class="game-text g-wrapper">
+      <div style="padding: 100px 0">
+        <h3>Let's have some fun</h3>
+
+        <h3>If you want the CA and Socials, pass the lazy test below</h3>
+      </div>
+
+      <MiniGame client:only="svelte" />
+    </div>
+
+    <Footer />
+  </body>
+</html>
 
 <script>
   import { animReveal } from '@/utils/reveal'

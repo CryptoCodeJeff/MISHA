@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Svg from '@/components/essentials/Svg.svelte'
-  export let company: string = '$LELO, All rights reserved'
+  import Svg from '@/components/Svg.svelte'
+  export let company: string = '$MISHA, All rights reserved'
   export let logo: string = ''
 
   const socials = [
@@ -44,19 +44,15 @@
     align-items: center;
     gap: 20px;
     margin-top: 200px;
-    background-color: var(--colorBrand);
-    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.5);
-    border-top: 3px solid black;
 
     .legal-section {
       padding-top: 20px;
       display: flex;
       align-items: center;
       flex-direction: column;
-      gap: 20px;
 
       transform: scale(0.85);
-      font-size: 13px;
+      font-size: 20px;
       margin-bottom: 10px;
 
       color: var(--colorText2);
@@ -70,7 +66,9 @@
 
 <div class="footer">
   <div class="legal-section">
-    <p>$LELO is a meme coin for fun, with no real value or profit expectation. By buying $LELO, you agree you've read and understood this.</p>
+    <p>
+      $MISHA is a meme coin for fun, with no real value or profit expectation. By buying $MISHA, you agree you've read and understood this.
+    </p>
     <div>© {new Date().getFullYear()} {company}</div>
   </div>
 </div>
