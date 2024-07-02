@@ -172,10 +172,10 @@
     <a href="https://x.com/MishaOnSolana" target="_blank">
       <Svg name="twitter" />
     </a>
-    <a href="https://dexscreener.com/solana/kle4pt5eq2bv286jtkjq1zstiwn29w3xywthwkdpjck" target="_blank">
-      <Svg name="dexscreener" />
+    <a href="https://pump.fun/profile/cryptojeff" target="_blank">
+      <Svg name="pump" />
     </a>
   </div>
 
-  <p class="ca" class:win>KLE4pt5Eq2Bv286JTkjq1zsTiwN29w3xYWThwkDpjCK</p>
+  <p class="ca" class:win>XXXXXXXXv286JTkjq1zsTiwN2xXXXXXXXXDpjCK</p>
 </div>
