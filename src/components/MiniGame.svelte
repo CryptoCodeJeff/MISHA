@@ -51,6 +51,14 @@
     }
   }
 
+  .ca {
+    &.win {
+      opacity: 1;
+    }
+    font-size: 30px;
+    opacity: 0;
+  }
+
   .section {
     display: flex;
     justify-content: space-between;
@@ -58,6 +66,8 @@
     flex-direction: column;
 
     .socials {
+      display: flex;
+      gap: 30px;
       transition: 0.5s;
       padding: 50px 0;
       opacity: 0;
@@ -132,7 +142,7 @@
   }
 </style>
 
-<div id="tsparticles"></div>
+<div id="tsparticles" style="z-index: -1;"></div>
 
 <div class="section">
   <div class="game">
@@ -151,9 +161,6 @@
     <a href="https://t.me/mishamemecoin" target="_blank">
       <Svg name="telegram" />
     </a>
-    <a href="https://pump.fun/2ePDJUwAb7SeuFovCikS9LFS9CX9tj5WMtrpANeYpump" target="_blank">
-      <Svg name="pump" />
-    </a>
     <a href="https://x.com/MishaOnSolana" target="_blank">
       <Svg name="twitter" />
     </a>
@@ -161,4 +168,6 @@
       <Svg name="dexscreener" />
     </a>
   </div>
+
+  <p class="ca" class:win>5mbK36SZ7J19An8jFochhQS4of8g6BwUjbeCSxBSoXXX</p>
 </div>
