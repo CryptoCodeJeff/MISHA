@@ -31,6 +31,7 @@
 </script>
 
 <style lang="scss">
+  @import 'src/sass/mixins.scss';
   #tsparticles {
     position: fixed;
     width: 100%;
@@ -40,6 +41,7 @@
 
   .game {
     max-width: 300px;
+
     img {
       object-fit: cover;
       border-radius: 10px;
@@ -55,7 +57,10 @@
     &.win {
       opacity: 1;
     }
-    font-size: 30px;
+
+    @include desktop {
+      font-size: 30px;
+    }
     opacity: 0;
   }
 
@@ -164,7 +169,7 @@
     <a href="https://x.com/MishaOnSolana" target="_blank">
       <Svg name="twitter" />
     </a>
-    <a href="" target="_blank">
+    <a href="https://dexscreener.com/solana/kle4pt5eq2bv286jtkjq1zstiwn29w3xywthwkdpjck" target="_blank">
       <Svg name="dexscreener" />
     </a>
   </div>
