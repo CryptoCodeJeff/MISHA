@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro sync && astro dev",
-    "build": "node scripts/hidePrivate && astro build && node scripts/addPrivate",
+    "build": "astro build",
     "preview": "astro preview",
     "update": "ncu -u && npm install"
   },

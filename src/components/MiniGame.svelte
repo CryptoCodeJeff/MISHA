@@ -154,7 +154,7 @@
     <a href="https://pump.fun/2ePDJUwAb7SeuFovCikS9LFS9CX9tj5WMtrpANeYpump" target="_blank">
       <Svg name="pump" />
     </a>
-    <a href="https://x.com/FeedEveryBonk" target="_blank">
+    <a href="https://x.com/MishaOnSolana" target="_blank">
       <Svg name="twitter" />
     </a>
     <a href="" target="_blank">
