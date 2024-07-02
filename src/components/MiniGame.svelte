@@ -40,10 +40,16 @@
   }
 
   .game {
-    max-width: 300px;
+    max-width: 320px;
+
+    h3 {
+      font-size: 25px;
+      text-align: center;
+    }
 
     img {
       object-fit: cover;
+      width: 100%;
       border-radius: 10px;
     }
 
@@ -89,7 +95,7 @@
   }
 
   .button-name {
-    width: 120px;
+    width: 100%;
     align-items: center;
     appearance: none;
     background-color: #fcfcfd;
@@ -151,15 +157,12 @@
 
 <div class="section">
   <div class="game">
+    <h3>Pause the MISHA without hat</h3>
     <img src="/assets/memes/{images[index]}.jpg" alt="miau" width="300px" height="300px" />
 
-    <div class="info">
-      <h3>Find the real Misha</h3>
-
-      <button class="button-name" on:click={click}>
-        {paused ? 'Resume' : 'Pause'}
-      </button>
-    </div>
+    <button class="button-name" on:click={click}>
+      {paused ? 'Resume' : 'Pause'}
+    </button>
   </div>
 
   <div class="socials" class:win>
