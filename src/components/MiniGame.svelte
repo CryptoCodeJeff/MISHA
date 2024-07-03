@@ -172,7 +172,7 @@
     <a href="https://x.com/MishaOnSolana" target="_blank">
       <Svg name="twitter" />
     </a>
-    <a href="https://pump.fun/profile/cryptojeff" target="_blank">
+    <a href="https://pump.fun/89kNPfsS8KPxjneKywgXri3sgGYYG7QZZaLiXxcTpump" target="_blank">
       <Svg name="pump" />
     </a>
   </div>

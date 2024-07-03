@@ -35,7 +35,7 @@
 </script>
 
 <style lang="scss">
-  .footer {
+  footer {
     position: relative;
     width: 100%;
     height: fit-content;
@@ -64,11 +64,11 @@
   }
 </style>
 
-<div class="footer">
+<footer>
   <div class="legal-section">
     <p>
       $MISHA is a meme coin for fun, with no real value or profit expectation. By buying $MISHA, you agree you've read and understood this.
     </p>
     <div>© {new Date().getFullYear()} {company}</div>
   </div>
-</div>
+</footer>
